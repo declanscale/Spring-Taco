@@ -20,7 +20,7 @@ import tacos.Ingredient.Type;
 
 @Slf4j
 @Controller
-@RequestMapping("/Design")
+@RequestMapping("/design")
 public class DesignTacoController {
 	
 	@GetMapping
