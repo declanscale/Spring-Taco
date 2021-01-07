@@ -58,7 +58,7 @@ public class DesignTacoController {
 		//save the taco design
 		//wip
 		log.info("Processing design: " + design);
-		return "redirect:/order/current";
+		return "redirect:/orders/current";
 	}
 
 }
