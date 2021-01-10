@@ -1,2 +1,2 @@
 # Spring-Taco
-A Spring project for practicing 
+A SpringMVC project
