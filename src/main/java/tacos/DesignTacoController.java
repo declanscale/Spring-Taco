@@ -38,7 +38,7 @@ public class DesignTacoController {
 	
 	@GetMapping
 	public String showDesignForm(Model model) {
-		/*
+		
 		List<Ingredient> ingredients = Arrays.asList(
 				new Ingredient("FLTO","Flour Tortilla",Type.WRAP),
 				new Ingredient("COTO", "Corn Tortilla", Type.WRAP),
@@ -52,7 +52,14 @@ public class DesignTacoController {
 				new Ingredient("SRCR","Sour Cream",Type.SAUCE)
 				
 		);
-		*/
+		Type[] types = Ingredient.Type.values();
+		for(Type type : types) {
+			model.addAttribute(type.toString().toLowerCase(),filterByType(ingredients,type));
+		}
+		
+		model.addAttribute("design",new Taco());
+		
+		/*
 		List<Ingredient> ingredients = new ArrayList<>();
 		ingredientRepo.findAll().forEach(i -> ingredients.add(i));
 		
@@ -60,8 +67,10 @@ public class DesignTacoController {
 		for(Type type : types) {
 			model.addAttribute(type.toString().toLowerCase(),filterByType(ingredients,type));
 		}
+		*/
 		
-		//model.addAttribute("design",new Taco());
+		
+		
 		
 		return "design";
 	}
